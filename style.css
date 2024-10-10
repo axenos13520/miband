@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "Bliss Pro";
+  src: url("./assets/font/blisspro_medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+  font-family: "Bliss Pro";
+  color: #fff;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 1;
+}
+
+.wrapper {
+  padding: 0 100px;
+  width: 100vw;
+}
+
+header > .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#header__icon {
+  width: 40px;
+}
+
+#header__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 430px;
+}
+
+#header__link {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+}
+
+#header__link::after {
+  transition-property: width background-color;
+  transition-duration: 0.7s;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: rgb(34, 64, 30);
+  border-radius: 2px;
+}
+
+#header__link:hover::after {
+  transition-property: width;
+  transition-duration: 0.3s;
+  left: 0;
+  width: 100%;
+  background-color: #f58d56;
+}
+
+#first-section {
+  padding-top: 180px;
+  width: 100vw;
+  height: 1000px;
+  background-image: url("./assets/firstSectionBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#first-section__content > h3 {
+  padding: 14px 0;
+  width: 310px;
+  height: 50px;
+  background-color: #f55656;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+#first-section__content > h1 {
+  margin-top: 45px;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 70px;
+  text-align: left;
+}
+
+#first-section__content > h1 > span {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 91.1px;
+}
+
+#first-section__content > h2 {
+  margin-top: 45px;
+  width: 520px;
+  height: 60px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.85px;
+  opacity: 50%;
+}
+
+#first-section__content > button {
+  transition-property: box-shadow;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  margin-top: 85px;
+  width: 290px;
+  height: 90px;
+  background-color: #f58d56;
+  border-radius: 27px;
+  font-family: "Bliss Pro";
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 29.85px;
+  color: #fff;
+}
+
+#first-section__content > button:hover {
+  transition-property: box-shadow;
+  transition-duration: 0.5s;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.3);
+}
+
+#first-section__content > button:active {
+  box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.8);
+}
